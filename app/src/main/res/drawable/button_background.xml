@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- حالت فوکوس -->
+    <item android:state_focused="true">
+        <layer-list>
+            <!-- لایه ۱: تصویر اصلی -->
+            <item>
+                <bitmap
+                    android:src="@drawable/btn1h"
+                    android:gravity="center" />
+            </item>
+
+            <!-- لایه ۲: نوار آبی دور تصویر -->
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="@android:color/transparent" />
+                    <stroke android:width="4dp" android:color="#3399FF" />
+                    <corners android:radius="12dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <!-- حالت عادی -->
+    <item>
+        <bitmap
+            android:src="@drawable/btn1"
+            android:gravity="center" />
+    </item>
+
+</selector>

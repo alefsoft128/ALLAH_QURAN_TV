@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/horizontalScrollRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#0F1720"
+    android:scrollbars="horizontal|vertical">
+
+    <ScrollView
+        android:id="@+id/verticalScrollRoot"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="horizontal|vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/settingsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quran Settings"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingBottom="18dp"/>
+
+        <!-- Container helper style: simple card-like look using padding + background -->
+        <!-- Tartil Name (two buttons: afasy / shatri) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#141A21"
+            android:padding="14dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tartil Name (Player Sound)"
+                android:textColor="#E6EEF6"
+                android:textSize="16sp"
+                android:paddingBottom="8dp"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroupTartil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioAfasy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="العفاسی (afasy)"
+                    android:textColor="#FFFFFF"
+                    android:focusable="true"/>
+
+                <RadioButton
+                    android:id="@+id/radioShatri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="شاطری (shatri)"
+                    android:textColor="#FFFFFF"
+                    android:focusable="true"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- Font Name Index (6 buttons: 0..5) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#141A21"
+            android:padding="14dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Font (Text Font Name)"
+                android:textColor="#E6EEF6"
+                android:textSize="16sp"
+                android:paddingBottom="8dp"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroupFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton android:id="@+id/radioFont0" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Font 1 (Scheherazad - شهرزاد)" android:textColor="#FFFFFF" android:focusable="true"/>
+                <RadioButton android:id="@+id/radioFont1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Font 2 (NoorZar - نور)" android:textColor="#FFFFFF" android:focusable="true"/>
+                <RadioButton android:id="@+id/radioFont2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Font 3 (AmiriQuran - امیری)" android:textColor="#FFFFFF" android:focusable="true"/>
+                <RadioButton android:id="@+id/radioFont3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Font 4 (UthmanicScript - ملک فهد)" android:textColor="#FFFFFF" android:focusable="true"/>
+                <RadioButton android:id="@+id/radioFont4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Font 5 (NotoNaskhArabic - نوتو)" android:textColor="#FFFFFF" android:focusable="true"/>
+                <RadioButton android:id="@+id/radioFont5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Font 6 (PDMS_Saleem - سالم)" android:textColor="#FFFFFF" android:focusable="true"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- Font Size (custom number) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#141A21"
+            android:padding="14dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Font Size (Text Size)" android:textColor="#E6EEF6" android:textSize="16sp" android:paddingBottom="8dp"/>
+
+            <EditText
+                android:id="@+id/editTextFontSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="e.g. 12"
+                android:inputType="number"
+                android:textColor="#FFFFFF"
+                android:background="?android:attr/editTextBackground"
+                android:focusable="true"/>
+        </LinearLayout>
+
+        <!-- Aya Repeat (custom number) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#141A21"
+            android:padding="14dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Aya Repeat (Sound Repeat)" android:textColor="#E6EEF6" android:textSize="16sp" android:paddingBottom="8dp"/>
+
+            <EditText
+                android:id="@+id/editTextAyaRepeat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="e.g. 2"
+                android:inputType="number"
+                android:textColor="#FFFFFF"
+                android:background="?android:attr/editTextBackground"
+                android:focusable="true"/>
+        </LinearLayout>
+
+        <!-- Arabic Text Style (6 buttons) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#141A21"
+            android:padding="14dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Arabic Text Style (Main Arabic Text)" android:textColor="#E6EEF6" android:textSize="16sp" android:paddingBottom="8dp"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroupArabicStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton android:id="@+id/radioArabic0" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Style 1" android:textColor="#FFFFFF" android:focusable="true"/>
+                <RadioButton android:id="@+id/radioArabic1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Style 2" android:textColor="#FFFFFF" android:focusable="true"/>
+                <RadioButton android:id="@+id/radioArabic2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Style 3" android:textColor="#FFFFFF" android:focusable="true"/>
+                <RadioButton android:id="@+id/radioArabic3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Style 4" android:textColor="#FFFFFF" android:focusable="true"/>
+                <RadioButton android:id="@+id/radioArabic4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Style 5" android:textColor="#FFFFFF" android:focusable="true"/>
+                <RadioButton android:id="@+id/radioArabic5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Style 6" android:textColor="#FFFFFF" android:focusable="true"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- Translate Text Style (6 buttons) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#141A21"
+            android:padding="14dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Translation Style (Translate Text)" android:textColor="#E6EEF6" android:textSize="16sp" android:paddingBottom="8dp"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroupTranslateStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton android:id="@+id/radioTrans0" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Style 1" android:textColor="#FFFFFF" android:focusable="true"/>
+                <RadioButton android:id="@+id/radioTrans1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Style 2" android:textColor="#FFFFFF" android:focusable="true"/>
+                <RadioButton android:id="@+id/radioTrans2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Style 3" android:textColor="#FFFFFF" android:focusable="true"/>
+                <RadioButton android:id="@+id/radioTrans3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Style 4" android:textColor="#FFFFFF" android:focusable="true"/>
+                <RadioButton android:id="@+id/radioTrans4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Style 5" android:textColor="#FFFFFF" android:focusable="true"/>
+                <RadioButton android:id="@+id/radioTrans5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Style 6" android:textColor="#FFFFFF" android:focusable="true"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- Player Speed (6 buttons) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#141A21"
+            android:padding="14dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Player Speed (Sound Speed)" android:textColor="#E6EEF6" android:textSize="16sp" android:paddingBottom="8dp"/>
+
+            <RadioGroup android:id="@+id/radioGroupSpeed" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <RadioButton android:id="@+id/radioSpeed0" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Speed 1(0.5 Slow)" android:textColor="#FFFFFF" android:focusable="true"/>
+                <RadioButton android:id="@+id/radioSpeed1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Speed 2(0.75)" android:textColor="#FFFFFF" android:focusable="true"/>
+                <RadioButton android:id="@+id/radioSpeed2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Speed 3(1 Normal)" android:textColor="#FFFFFF" android:focusable="true"/>
+                <RadioButton android:id="@+id/radioSpeed3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Speed 4(1.25)" android:textColor="#FFFFFF" android:focusable="true"/>
+                <RadioButton android:id="@+id/radioSpeed4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Speed 5(1.5)" android:textColor="#FFFFFF" android:focusable="true"/>
+                <RadioButton android:id="@+id/radioSpeed5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Speed 6(2 Fast)" android:textColor="#FFFFFF" android:focusable="true"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- Translator Selection (7 items from your file list) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#141A21"
+            android:padding="14dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Translator (Translator Laguage)" android:textColor="#E6EEF6" android:textSize="16sp" android:paddingBottom="8dp"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroupTranslator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton android:id="@+id/radioTranslator0" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="China - zh.jian" android:textColor="#FFFFFF" android:focusable="true"/>
+                <RadioButton android:id="@+id/radioTranslator1" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="German - de.zaidan" android:textColor="#FFFFFF" android:focusable="true"/>
+                <RadioButton android:id="@+id/radioTranslator2" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="English - en.yusufali" android:textColor="#FFFFFF" android:focusable="true"/>
+                <RadioButton android:id="@+id/radioTranslator3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Spain - es.cortes" android:textColor="#FFFFFF" android:focusable="true"/>
+                <RadioButton android:id="@+id/radioTranslator4" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Persian - فارسی - fa.fooladvand" android:textColor="#FFFFFF" android:focusable="true"/>
+                <RadioButton android:id="@+id/radioTranslator5" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Russia - ru.porokhova" android:textColor="#FFFFFF" android:focusable="true"/>
+                <RadioButton android:id="@+id/radioTranslator6" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Turkish  - tr.yazir" android:textColor="#FFFFFF" android:focusable="true"/>
+                <RadioButton android:id="@+id/radioTranslator7" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="None" android:textColor="#FFFFFF" android:focusable="true"/>
+            </RadioGroup>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/translation_warning"
+                android:textColor="#FF5722"
+                android:textSize="18sp"
+                android:padding="12dp"
+                android:lineSpacingExtra="6dp"
+                android:scrollHorizontally="false"
+                android:background="@android:color/transparent" />
+
+        </LinearLayout>
+
+
+        <!-- Animation Styles (6 buttons) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#141A21"
+            android:padding="14dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Text Animation Styles" android:textColor="#E6EEF6" android:textSize="16sp" android:paddingBottom="8dp"/>
+
+            <RadioGroup android:id="@+id/radioAnim" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <RadioButton android:id="@+id/radioAnim1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="fadeInUp" android:textColor="#FFFFFF" android:focusable="true"/>
+                <RadioButton android:id="@+id/radioAnim2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="fadeIn" android:textColor="#FFFFFF" android:focusable="true"/>
+                <RadioButton android:id="@+id/radioAnim3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="bounceIn" android:textColor="#FFFFFF" android:focusable="true"/>
+                <RadioButton android:id="@+id/radioAnim4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="zoomIn" android:textColor="#FFFFFF" android:focusable="true"/>
+                <RadioButton android:id="@+id/radioAnim5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="slideInLeft" android:textColor="#FFFFFF" android:focusable="true"/>
+                <RadioButton android:id="@+id/radioAnim6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="flipInX" android:textColor="#FFFFFF" android:focusable="true"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- Save button -->
+        <Button
+            android:id="@+id/saveSettings"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Save Settings"
+            android:textSize="18sp"
+            android:textColor="#0F1720"
+            android:background="#FFD54F"
+            android:focusable="true"
+            android:layout_marginBottom="30dp"/>
+    </LinearLayout>
+</ScrollView>
+</HorizontalScrollView>

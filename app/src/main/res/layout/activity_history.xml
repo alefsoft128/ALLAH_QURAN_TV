@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F1720"
+    android:fillViewport="true"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- عنوان -->
+        <TextView
+            android:id="@+id/historyTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="History"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingBottom="18dp"/>
+
+        <!-- محتوای نمونه: لیست تاریخچه -->
+        <TextView
+            android:id="@+id/historyContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#E6EEF6"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:text="اینجا محتوای تاریخچه کاربر نمایش داده می‌شود..."
+            android:focusable="false"/>
+
+        <!-- فاصله -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+
+        <!-- دکمه Continue -->
+        <Button
+            android:id="@+id/continueBtn"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Continue | History"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:background="#006400"
+            android:focusable="true"
+            android:focusableInTouchMode="true"/>
+
+    </LinearLayout>
+</ScrollView>

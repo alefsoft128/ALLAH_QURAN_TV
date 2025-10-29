@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Allah_Quran_TV</string>
+    <string name="browse_title">Allah Quran tv</string>
+    <string name="related_movies">Related Surah</string>
+    <string name="grid_view">Grid View</string>
+    <string name="error_fragment">Error Fragment</string>
+    <string name="personal_settings">Settings</string>
+    <string name="watch_trailer_1">About us</string>
+    <string name="watch_trailer_2">FREE</string>
+    <string name="rent_1">R1</string>
+    <string name="rent_2">R2</string>
+    <string name="buy_1">R3</string>
+    <string name="buy_2">R4</string>
+    <string name="movie">Quran</string>
+
+    <string name="translation_warning">
+    Warning: Translations are not exact!\n
+    For example, "الرحمن الرحیم" is often translated as
+    "The Most Gracious, The Most Merciful".\n
+    But in Arabic, both words share the same root "R-H-M",\n
+    which refers to compassion that flows from a private "R-H-M"\n
+        (It has no English equivalent - Union with the Divine Attributes \n
+        With the help of the principles of Taqva(Quran Principles) which leads to private R-H-M)\n
+    to a public "R-H-M" (mercy - General Welfare).\n
+    It reflects an attribute of ALLAH also present in humans — the source\n
+    of creation and the act of giving without being asked.\n
+    None of these layers of meaning are captured in a simple translation.
+    </string>
+
+    <string name="about">
+﴿ 🌸 بِسْمِ اللَّـهِ الرَّ‌حْمَـٰنِ الرَّ‌حِيمِ 🌸 ﴾
+أَلَمْ تَرَوْا أَنَّ اللَّهَ سَخَّرَ لَکُمْ مَا فِی السَّمَاوَاتِ وَمَا فِی الْأَرْضِ وَأَسْبَغَ عَلَیْکُمْ نِعَمَهُ ظَاهِرَةً وَبَاطِنَةً
+وَمِنَ النَّاسِ مَنْ یُجَادِلُ فِی اللَّهِ بِغَیْرِ عِلْمٍ وَلَا هُدًی وَلَا کِتَابٍ مُنِیرٍ ﴿۲۰﴾
+</string>
+
+
+    <!-- Error messages -->
+    <string name="error_fragment_message">An error occurred</string>
+    <string name="dismiss_error">Dismiss</string>
+    <string name="title_activity_main2">Leanback MainActivity2</string>
+</resources>

@@ -27,7 +27,7 @@
 
 | Component | Description |
 |----------|-------------|
-| **Kotlin** | Main programming language |
+| **Java** | Main programming language |
 | **Android TV Leanback / Jetpack** | TV UI support |
 | **ExoPlayer / MediaPlayer** | Video / audio playback |
 | **SharedPreferences** | Saving settings locally |

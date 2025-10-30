@@ -104,9 +104,9 @@ GitHub: https://github.com/alefsoft128
 
 ---
 
-## ✅ 🌟 Support
+## ✅ 🌟Thanks
 
-If you like this project, please ⭐ the repository.
+If you like this project:
 
 ## 🌸 Very Thanks To
 

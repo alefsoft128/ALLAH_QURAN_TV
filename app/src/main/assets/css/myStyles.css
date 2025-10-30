@@ -1,26 +1,14 @@
 :root{
-  --stroke:text-shadow:   0 0 5px #000,
-                          0 0 5px #000,
-                          0 0 5px #000,
-                          0 0 5px #000,
-                          0 0 5px #000,
-                          0 0 5px #000,
-                          0 0 5px #000,
-                          0 0 5px #000,
-                          0 0 5px #000,
-                          0 0 5px #000,
-                          0 0 5px #000,
-                          0 0 5px #000,
-                          0 0 5px #000;
+  --stroke: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000, 0 0 5px #000, 0 0 5px #000,0 0 5px #000, 0 0 5px #000, 0 0 5px #000,0 0 5px #000, 0 0 5px #000, 0 0 5px #000, 0 0 5px #000, 0 0 5px #000;
 }
 .smallT1{
 color: inherit;
-font-size: 25%;
+font-size: 33%;
 text-shadow:1px 1px 1px #000;
 }
 .qqqq0 {
-   color: rgba(255, 255, 255, 0.72);
-   text-shadow: 2px 2px 0 #4074b5, 2px -2px 0 #4074b5, -2px 2px 0 #4074b5, -2px -2px 0 #4074b5, 2px 0px 0 #4074b5, 0px 2px 0 #4074b5, -2px 0px 0 #4074b5, 0px -2px 0 #4074b5;
+   color: rgba(255, 255, 255, 0.9);
+   text-shadow: var(--stroke);
       padding: 10px;
       margin:10px;
 }

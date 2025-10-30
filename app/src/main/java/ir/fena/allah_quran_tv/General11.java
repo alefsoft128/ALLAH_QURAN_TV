@@ -1,22 +1,15 @@
 package ir.fena.allah_quran_tv;
 
-import android.content.Intent;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.XmlResourceParser;
-import android.view.View;
-import android.widget.Toast;
-
-import java.io.File;
-import java.io.FileInputStream;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import android.content.Context;
 
 import org.xmlpull.v1.XmlPullParser;
-import org.xmlpull.v1.XmlPullParserFactory;
 
-public class General1 {
+import java.util.ArrayList;
+import java.util.List;
+
+public class General11 {
     public static int getSuraIndex(String query, String[] array) {
         for (int i = 0; i < array.length; i++) {
             if (array[i].contains(query)) {  // یا equals اگر دقیق بخوای
@@ -71,17 +64,17 @@ public class General1 {
 
     public static void trimHistory() {
         // اگر لیست null نیست و تعدادش بیشتر از 200 است
-        if (General1.History != null && General1.History.size() > 313) {
+        if (General11.History != null && General11.History.size() > 313) {
             // حذف 100 خط اول
             for (int i = 0; i < 100; i++) {
-                General1.History.remove(0);
+                General11.History.remove(0);
             }
         }
     }
 
     public static List<List<Object>> createRepeatedPlaylist(int repeatCount) {
         // 1. بررسی نال بودن General1.playlistMain
-        if (General1.playlistMain == null) {
+        if (General11.playlistMain == null) {
             System.err.println("خطا: General1.playlistMain نال است.");
             return new ArrayList<>();
         }
@@ -96,7 +89,7 @@ public class General1 {
         List<List<Object>> repeatedPlaylist = new ArrayList<>();
 
         // 4. پیمایش لیست اصلی
-        for (List<Object> originalItem : General1.playlistMain) {
+        for (List<Object> originalItem : General11.playlistMain) {
 
             // اطمینان از معتبر بودن آیتم (حداقل حاوی عنصر 0 به عنوان نام آهنگ)
             if (originalItem == null || originalItem.size() == 0) {
@@ -116,16 +109,16 @@ public class General1 {
     }
 
     //String newAyaText = General1.getAyaText(ctx, 2, 3);
-    public static String getAyaText(android.content.Context context, int suraIndex, int ayaIndex) {
+    public static String getAyaText(Context context, int suraIndex, int ayaIndex) {
         try {
-            android.content.res.XmlResourceParser parser =
-                    context.getResources().getXml(ir.fena.allah_quran_tv.R.xml.quran_simple);
+            XmlResourceParser parser =
+                    context.getResources().getXml(R.xml.quran_simple);
 
             int eventType = parser.getEventType();
             boolean inTargetSura = false;
 
-            while (eventType != org.xmlpull.v1.XmlPullParser.END_DOCUMENT) {
-                if (eventType == org.xmlpull.v1.XmlPullParser.START_TAG) {
+            while (eventType != XmlPullParser.END_DOCUMENT) {
+                if (eventType == XmlPullParser.START_TAG) {
                     String tag = parser.getName();
 
                     if (tag.equals("sura")) {
@@ -161,7 +154,7 @@ public class General1 {
             "tr_yazir.xml"
     };
 
-    public static String getAyaTranslation(android.content.Context context, int suraIndex, int ayaIndex, int translatorIndex) {
+    public static String getAyaTranslation(Context context, int suraIndex, int ayaIndex, int translatorIndex) {
         // اگر translatorIndex معتبر نیست، رشته خالی بده
         if (translatorIndex < 0 || translatorIndex >= TRANSLATOR_PATHS.length) {
             return "";
@@ -175,13 +168,13 @@ public class General1 {
             int resId = context.getResources().getIdentifier(fileName, "xml", context.getPackageName());
             if (resId == 0) return "";
 
-            android.content.res.XmlResourceParser parser = context.getResources().getXml(resId);
+            XmlResourceParser parser = context.getResources().getXml(resId);
 
             int eventType = parser.getEventType();
             boolean inTargetSura = false;
 
-            while (eventType != org.xmlpull.v1.XmlPullParser.END_DOCUMENT) {
-                if (eventType == org.xmlpull.v1.XmlPullParser.START_TAG) {
+            while (eventType != XmlPullParser.END_DOCUMENT) {
+                if (eventType == XmlPullParser.START_TAG) {
                     String tag = parser.getName();
 
                     if ("sura".equals(tag)) {
@@ -587,17 +580,17 @@ public class General1 {
 
 
     public static void loadSettings(SharedPreferences prefs) {
-        General1.tartilName = prefs.getString("tartilName", General1.tartilName);
-        General1.fontNameIndex = prefs.getInt("fontNameIndex", General1.fontNameIndex);
-        General1.fontSize = prefs.getInt("fontSize", General1.fontSize);
-        General1.ayaRepeat = prefs.getInt("ayaRepeat", General1.ayaRepeat);
-        General1.styleArabicText = prefs.getInt("styleArabicText", General1.styleArabicText);
-        General1.styleTranslateText = prefs.getInt("styleTranslateText", General1.styleTranslateText);
-        General1.playerSpeed = prefs.getInt("playerSpeed", General1.playerSpeed);
-        General1.translatorIndex = prefs.getInt("translatorIndex", General1.translatorIndex);
-        General1.animateStyleIndex = prefs.getInt("animateStyleIndex", General1.animateStyleIndex);
-        General1.ayaIndex = prefs.getInt("ayaIndex", General1.ayaIndex);
-        General1.suraIndex = prefs.getInt("suraIndex", General1.suraIndex);
+        General11.tartilName = prefs.getString("tartilName", General11.tartilName);
+        General11.fontNameIndex = prefs.getInt("fontNameIndex", General11.fontNameIndex);
+        General11.fontSize = prefs.getInt("fontSize", General11.fontSize);
+        General11.ayaRepeat = prefs.getInt("ayaRepeat", General11.ayaRepeat);
+        General11.styleArabicText = prefs.getInt("styleArabicText", General11.styleArabicText);
+        General11.styleTranslateText = prefs.getInt("styleTranslateText", General11.styleTranslateText);
+        General11.playerSpeed = prefs.getInt("playerSpeed", General11.playerSpeed);
+        General11.translatorIndex = prefs.getInt("translatorIndex", General11.translatorIndex);
+        General11.animateStyleIndex = prefs.getInt("animateStyleIndex", General11.animateStyleIndex);
+        General11.ayaIndex = prefs.getInt("ayaIndex", General11.ayaIndex);
+        General11.suraIndex = prefs.getInt("suraIndex", General11.suraIndex);
     }
 
 

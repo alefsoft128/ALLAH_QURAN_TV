@@ -15,7 +15,7 @@ public class QuranPlaylistGenerator {
     };
 
     // سوره‌های استثنا (بر اساس شماره سوره ۱-based)
-    private static final int[] excludedSuras = {1,9};
+    private static final int[] excludedSuras = {9};
 
     /**
      * بررسی می‌کند که آیا سوره (۱-based) جزء سوره‌های استثنا است یا خیر.

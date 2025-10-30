@@ -1,4 +1,4 @@
-# 📺 ALLAH_QURAN_TV
+# 📺 ALLAH_QURAN_TV(Android TV)
 
 **ALLAH_QURAN_TV** is an Android TV application for beautiful Quran recitation and translation with full remote-control support, customizable fonts, styles, repeat options, and high-quality playback.
 

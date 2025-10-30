@@ -15,7 +15,7 @@ import com.bumptech.glide.Glide;
  * A CardPresenter is used to generate Views and bind Objects to them on demand.
  * It contains an Image CardView
  */
-public class CardPresenter extends Presenter {
+public class CardPresenter2 extends Presenter {
     private static final String TAG = "CardPresenter";
 
     private static final int CARD_WIDTH = 555;
@@ -139,10 +139,6 @@ public class CardPresenter extends Presenter {
                     // فیلتر طلایی/زرد
                     cardView.getMainImageView().setColorFilter(
                             0x99FFD700, android.graphics.PorterDuff.Mode.OVERLAY);
-
-                    // ************* خط اضافه شده برای اعمال حاشیه *************
-                    v.setBackgroundResource(R.drawable.card_selected_border);
-                    // *******************************************************
                 } else {
                     // برگشت به حالت اولیه با انیمیشن
                     android.animation.ObjectAnimator.ofFloat(
@@ -151,14 +147,14 @@ public class CardPresenter extends Presenter {
 
                     // حذف فیلتر
                     cardView.getMainImageView().clearColorFilter();
-
-                    // ************* خط اضافه شده برای حذف حاشیه *************
-                    v.setBackground(null);
-                    // ****************************************************
                 }
             });
         }
     }
+
+
+
+
 
     @Override
     public void onUnbindViewHolder(ViewHolder viewHolder) {

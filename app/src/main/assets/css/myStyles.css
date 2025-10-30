@@ -1,5 +1,17 @@
 :root{
-  --stroke:text-shadow:-2px -2px 0 #000,2px -2px 0 #000,-2px  2px 0 #000,2px  2px 0 #000;
+  --stroke:text-shadow:   0 0 5px #000,
+                          0 0 5px #000,
+                          0 0 5px #000,
+                          0 0 5px #000,
+                          0 0 5px #000,
+                          0 0 5px #000,
+                          0 0 5px #000,
+                          0 0 5px #000,
+                          0 0 5px #000,
+                          0 0 5px #000,
+                          0 0 5px #000,
+                          0 0 5px #000,
+                          0 0 5px #000;
 }
 .smallT1{
 color: inherit;

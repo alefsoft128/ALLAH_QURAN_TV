@@ -1,6 +1,5 @@
 package ir.fena.allah_quran_tv;
 
-import android.content.Context;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -9,7 +8,6 @@ import android.os.Looper;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
-import android.view.LayoutInflater;
 import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +15,6 @@ import android.webkit.WebView;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.leanback.app.DetailsSupportFragment;
 import androidx.leanback.app.DetailsSupportFragmentBackgroundController;
@@ -36,7 +33,7 @@ import java.util.Locale;
  * - نمایش متن آیه در WebView
  * - کنترل Pause/Resume با دکمه OK/ENTER ریموت
  */
-public class VideoDetailsFragment extends DetailsSupportFragment {
+public class VideoDetailsFragment1 extends DetailsSupportFragment {
 
     private static final String TAG = "VideoDetailsFragment";
 
@@ -61,7 +58,7 @@ public class VideoDetailsFragment extends DetailsSupportFragment {
     // handler برای اجرای کارها در UI thread
     private final Handler mainHandler = new Handler(Looper.getMainLooper());
 
-    public VideoDetailsFragment() {
+    public VideoDetailsFragment1() {
         // سازنده خالی
     }
 
@@ -328,8 +325,8 @@ public class VideoDetailsFragment extends DetailsSupportFragment {
 
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
         String dateTime = sdf.format(new Date(timestamp));
-        //General1.History.clear();
-        General1.History.add("Sura ="+ General1.titles[General1.suraIndex-1] +" || Aya = "+General1.ayaIndex + " || Time = " + dateTime+" ("+General1.suraIndex+"|"+General1.ayaIndex+")");
+
+        General1.History.add("Sura ="+ General1.titles[General1.suraIndex-1] +" ||| Aya = "+General1.ayaIndex + " ||| Time = " + dateTime);
         HistoryManager.save(getContext(), General1.History);
         //General1.History = HistoryManager.load(this);
 

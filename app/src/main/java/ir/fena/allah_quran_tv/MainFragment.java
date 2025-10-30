@@ -29,6 +29,8 @@ import androidx.leanback.widget.OnItemViewSelectedListener;
 import androidx.leanback.widget.Presenter;
 import androidx.leanback.widget.Row;
 import androidx.leanback.widget.RowPresenter;
+import androidx.leanback.widget.SearchOrbView;
+import androidx.leanback.widget.TitleViewAdapter;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.SimpleTarget;
@@ -104,39 +106,50 @@ public class MainFragment extends BrowseSupportFragment {
         setHeadersState(HEADERS_ENABLED);
         setHeadersTransitionOnBackEnabled(true);
         setBrandColor(ContextCompat.getColor(getActivity(), R.color.fastlane_background));
-        setSearchAffordanceColor(ContextCompat.getColor(getActivity(), R.color.search_opaque));
+        setSearchAffordanceColor(ContextCompat.getColor(getActivity(), R.color.default_background));
 
+        try {
+            // 1. آداپتور عنوان را دریافت می کنیم
+            TitleViewAdapter titleAdapter = getTitleViewAdapter();
 
-        //historyBtn.setOnClickListener(v -> startActivity(new Intent(requireContext(), HistoryActivity.class)));
-        new Handler().postDelayed(() -> {
-            View root = getView();
-            if (root instanceof ViewGroup) {
-                ViewGroup parent = (ViewGroup) root;
-                android.widget.Button continueBtn = new android.widget.Button(requireContext());
-                continueBtn.setText("Continue / ادامه / يكمل");
-                continueBtn.setTextColor(Color.WHITE);
-                continueBtn.setBackgroundColor(Color.parseColor("#006400"));
-                continueBtn.setTextSize(20);
-                continueBtn.setPadding(40, 20, 40, 20);
-                continueBtn.setFocusable(true);
-                continueBtn.setFocusableInTouchMode(true);
+            // 2. اگر آداپتور موجود است و دارای ویوی جستجو است
+            if (titleAdapter != null) {
+                View searchView = titleAdapter.getSearchAffordanceView();
 
-                android.widget.FrameLayout.LayoutParams params = new android.widget.FrameLayout.LayoutParams(
-                        ViewGroup.LayoutParams.WRAP_CONTENT,
-                        ViewGroup.LayoutParams.WRAP_CONTENT,
-                        Gravity.BOTTOM | Gravity.START
-                );
-                params.setMargins(16, 16, 16, 50);
-                continueBtn.setLayoutParams(params);
-
-                continueBtn.setOnClickListener(v -> startActivity(new Intent(requireContext(), HistoryActivity.class)));
-                parent.addView(continueBtn);
+                // 3. ویو را به SearchOrbView کست کرده و آیکن را تنظیم می کنیم
+                if (searchView instanceof SearchOrbView) {
+                    SearchOrbView searchOrb = (SearchOrbView) searchView;
+                    // از requireContext() استفاده کنید
+                    searchOrb.setOrbIcon(ContextCompat.getDrawable(requireContext(), R.drawable.history));
+                }
             }
-        }, 300);
+        } catch (IllegalStateException e) {
+            // اگر getTitleViewAdapter() قبل از ایجاد ویو فراخوانی شود، این خطا رخ می دهد
+            // معمولاً نباید در setupUIElements رخ دهد، اما برای ایمنی بهتر است
+            e.printStackTrace();
+        }
+
+    }
+
+    private void setupEventListeners() {
+        setOnItemViewClickedListener(new ItemViewClickedListener());
+        setOnItemViewSelectedListener(new ItemViewSelectedListener());
+
+        setOnSearchClickedListener(new View.OnClickListener() {
 
 
 
+            @Override
 
+            public void onClick(View view) {
+
+                //Toast.makeText(getActivity(), "Implement your own in-app search", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(requireContext(), HistoryActivity.class);
+                startActivity(intent);
+
+            }
+
+        });
 
     }
 
@@ -183,10 +196,7 @@ public class MainFragment extends BrowseSupportFragment {
         setAdapter(rowsAdapter);
     }
 
-    private void setupEventListeners() {
-        setOnItemViewClickedListener(new ItemViewClickedListener());
-        setOnItemViewSelectedListener(new ItemViewSelectedListener());
-    }
+
 
     private void startBackgroundTimer() {
         if (mBackgroundTimer != null) mBackgroundTimer.cancel();

@@ -34,7 +34,8 @@ public class AboutActivity extends Activity {
             + "🌸 Motion Backgrounds Teams 🌸\nhttps://motionbgs.com/\n\n"
             + "🌸 Amiri Project 🌸\nhttps://github.com/aliftype/amiri\n\n"
             + "🌸 Google Gemini and AI team 🌸\nhttps://gemini.google.com/\n\n"
-            + "🌸 and many others 🌸\n\n\n"
+            + "🌸 and many others 🌸\n\n\n\n"
+            + "🌸 Free and Opensource: https://github.com/alefsoft128/ALLAH_QURAN_TV/ 🌸\n"
             + "📩 Contact 📩\nalefsoft@protonmail.com\n\n"
             ;
 

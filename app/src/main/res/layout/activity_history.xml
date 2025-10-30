@@ -13,45 +13,13 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-        <!-- عنوان -->
-        <TextView
-            android:id="@+id/historyTitle"
+        <LinearLayout
+            android:id="@+id/historyContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="History"
-            android:textColor="#FFFFFF"
-            android:textSize="26sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:paddingBottom="18dp"/>
-
-        <!-- محتوای نمونه: لیست تاریخچه -->
-        <TextView
-            android:id="@+id/historyContent"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#E6EEF6"
-            android:textSize="16sp"
-            android:lineSpacingExtra="4dp"
-            android:text="اینجا محتوای تاریخچه کاربر نمایش داده می‌شود..."
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
             android:focusable="false"/>
-
-        <!-- فاصله -->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="30dp"/>
-
-        <!-- دکمه Continue -->
-        <Button
-            android:id="@+id/continueBtn"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:text="Continue | History"
-            android:textSize="20sp"
-            android:textColor="#FFFFFF"
-            android:background="#006400"
-            android:focusable="true"
-            android:focusableInTouchMode="true"/>
 
     </LinearLayout>
 </ScrollView>

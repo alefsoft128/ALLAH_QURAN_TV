@@ -9,9 +9,7 @@ import android.widget.GridLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityOptionsCompat;
 
-import java.util.List;
-
-public class IntermediateActivity extends AppCompatActivity {
+public class IntermediateActivity1 extends AppCompatActivity {
 
     private Movie selectedMovie;
 
@@ -59,12 +57,12 @@ public class IntermediateActivity extends AppCompatActivity {
                 if (General1.suraIndex>113 || General1.suraIndex<0) {General1.suraIndex = 0; General1.ayaIndex = 0;}
                 QuranPlaylistGenerator.generatePlaylist(1001, General1.suraIndex, General1.ayaIndex, General1.tartilName,General1.ayaRepeat);
 
-                Intent intent = new Intent(IntermediateActivity.this, DetailsActivity.class);
+                Intent intent = new Intent(IntermediateActivity1.this, DetailsActivity.class);
                 intent.putExtra(DetailsActivity.MOVIE, selectedMovie);
 
                 // Shared Element Transition
                 ActivityOptionsCompat bundle = ActivityOptionsCompat.makeSceneTransitionAnimation(
-                        IntermediateActivity.this,
+                        IntermediateActivity1.this,
                         ayaButton,
                         DetailsActivity.SHARED_ELEMENT_NAME
                 );
@@ -99,7 +97,7 @@ public class IntermediateActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        //General1.suraIndex--;
+        General1.suraIndex--;
         QuranPlaylistPlayer.stopPlaylist();
     }
 

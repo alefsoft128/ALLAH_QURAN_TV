@@ -3,7 +3,7 @@ package ir.fena.allah_quran_tv;
 import java.util.ArrayList;
 import java.util.List;
 
-public class QuranPlaylistGenerator {
+public class QuranPlaylistGenerator1 {
 
     // تعداد آیات هر سوره
     private static final int[] ayaCount = {
@@ -15,7 +15,7 @@ public class QuranPlaylistGenerator {
     };
 
     // سوره‌های استثنا (بر اساس شماره سوره ۱-based)
-    private static final int[] excludedSuras = {1,9};
+    private static final int[] excludedSuras = {9};
 
     /**
      * بررسی می‌کند که آیا سوره (۱-based) جزء سوره‌های استثنا است یا خیر.

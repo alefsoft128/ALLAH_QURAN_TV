@@ -1,10 +1,10 @@
 :root{
-  --stroke:text-shadow:-2px -2px 0 #fff,2px -2px 0 #fff,-2px  2px 0 #fff,2px  2px 0 #fff;
+  --stroke:text-shadow:-2px -2px 0 #000,2px -2px 0 #000,-2px  2px 0 #000,2px  2px 0 #000;
 }
 .smallT1{
 color: inherit;
 font-size: 25%;
-text-shadow:1px 1px 1px #fff;
+text-shadow:1px 1px 1px #000;
 }
 .qqqq0 {
    color: rgba(255, 255, 255, 0.72);

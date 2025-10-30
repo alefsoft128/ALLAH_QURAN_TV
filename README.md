@@ -58,6 +58,30 @@
 
 ---
 
+## ✅ 🎨 Multimedia Gallery
+
+### 📸 Screenshots
+
+![Screen 1](app/multimedia/1.png)
+![Screen 2](app/multimedia/2.png)
+![Screen 3](app/multimedia/3.png)
+![Screen 4](app/multimedia/4.png)
+![Screen 5](app/multimedia/5.png)
+![Screen 6](app/multimedia/6.png)
+![Screen 7](app/multimedia/7.png)
+![Screen 8](app/multimedia/8.png)
+![Screen 9](app/multimedia/9.png)
+![Screen 10](app/multimedia/10.png)
+![Screen 11](app/multimedia/11.png)
+
+### 🎥 Demo Video
+
+[Watch Demo Video](app/multimedia/1.mp4)
+
+> All multimedia files are located in `app/multimedia/` folder of the project.
+
+---
+
 ## ✅ 📜 License
 
 This project is open-source for Islamic educational purposes.  
@@ -65,7 +89,7 @@ You may modify and improve with respect and integrity.
 
 ---
 
-## ✅ ❤️ Credits
+## ✅ ❤️ Special Thanks
 
 - **OpenAI**
 - **King Fahd Complex**
@@ -121,7 +145,6 @@ https://gemini.google.com/
 
 🌸 **and many others**  
 
-
 ---
 
 🌸 **Free and Opensource:**  
@@ -129,6 +152,3 @@ https://github.com/alefsoft128/ALLAH_QURAN_TV/
 
 📩 **Contact**  
 alefsoft@protonmail.com
-
-
-

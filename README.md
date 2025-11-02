@@ -15,7 +15,7 @@
 - ✅ Player speed control  
 - ✅ Settings saved locally
 - ✅ Live FHD+ wallpapers
-- ✅ Compatible with MediaPlayer
+- ✅ Compatible with Android MediaPlayer
 
 ---
 

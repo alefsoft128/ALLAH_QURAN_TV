@@ -23,6 +23,7 @@
     text-shadow: var(--stroke4);
     padding: 10px;
     margin:10px;
+    background: rgba(3, 170, 4, 0.32);
 }
 
 
@@ -44,6 +45,7 @@
     color: #e0dfdc;
     text-shadow:
             var(--stroke3);
+    background: rgba(170, 170, 0, 0.32);
 }
 
 .qqqq5{

@@ -13,7 +13,8 @@
 - ✅ Translation display with style options  
 - ✅ Aya repeat system  
 - ✅ Player speed control  
-- ✅ Settings saved locally  
+- ✅ Settings saved locally
+- ✅ Live FHD+ wallpapers
 - ✅ Compatible with MediaPlayer
 
 ---

@@ -150,6 +150,7 @@ https://gemini.google.com/
 
 🌸 **Free and Opensource:**  
 https://github.com/alefsoft128/ALLAH_QURAN_TV/
+https://cafebazaar.ir/app/ir.fena.allah_quran_tv/
 
 📩 **Contact**  
 alefsoft@protonmail.com

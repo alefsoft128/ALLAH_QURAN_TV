@@ -153,5 +153,7 @@ https://github.com/alefsoft128/ALLAH_QURAN_TV/
 
 https://cafebazaar.ir/app/ir.fena.allah_quran_tv/
 
+https://allah-quran-tv.sourceforge.io/
+
 📩 **Contact**  
 alefsoft@protonmail.com
